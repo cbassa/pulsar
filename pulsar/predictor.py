@@ -279,7 +279,7 @@ def polyco2table(name):
                         pass
             d['coeff'] = []
             while len(d['coeff']) < d['ncoeff']:
-                d['coeff'] += polyco.readline().split()
+                d['coeff'] += polyco.readline().replace('D','e').split()
 
             d['coeff'] = np.array([float(item) for item in d['coeff']])
 
